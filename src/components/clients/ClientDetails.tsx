@@ -16,16 +16,16 @@ const ClientDetails: React.FC = () => {
 
   return (
     <div className=" flex items-center justify-center p-8">
-      <div className=" bg-white rounded-lg grid grid-cols-2 gap-4 shadow-md overflow-hidden ">
+      <div className=" bg-white rounded-lg grid grid-row xl:grid-cols-2 gap-4 shadow-md overflow-hidden ">
         <div className="w-full h-full">
           <img
             src="/avatar1.jpg"
             alt="Client Profile"
-            className=" object-cover"
+            className=" object-cover max-w-lg"
           />
         </div>
         <div className="p-6 text-center w-full">
-          <h2 className="text-2xl font-bold mb-4">Client Details</h2>
+          <h2 className="text-2xl font-bold mb-4">Client ID : {clientId}</h2>
           <div className="grid grid-cols-2 gap-4">
             {Object.entries(client).map(([key, value]) => (
               <div key={key}>
