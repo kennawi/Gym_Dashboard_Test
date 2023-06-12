@@ -28,7 +28,7 @@ const clientSlice = createSlice({
         state.loading = false;
         state.client = action.payload;
       })
-      .addCase(fetchClientDetails.rejected, (state, action) => {
+      .addCase(fetchClientDetails.rejected, (state) => {
         state.loading = false;
       });
   },

@@ -33,7 +33,7 @@ const classSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchClasses.pending, (state, action) => {
+      .addCase(fetchClasses.pending, (state) => {
         state.loading = true;
         state.error = null;
         // return action.payload;
@@ -42,7 +42,7 @@ const classSlice = createSlice({
         state.loading = false;
         state.classes = action.payload;
       })
-      .addCase(fetchClasses.rejected, (state, action) => {
+      .addCase(fetchClasses.rejected, (state) => {
         state.loading = false;
       })
 

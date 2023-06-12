@@ -34,7 +34,7 @@ const clientSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchClients.pending, (state, action) => {
+      .addCase(fetchClients.pending, (state) => {
         state.loading = true;
         state.error = null;
         // return action.payload;
@@ -43,7 +43,7 @@ const clientSlice = createSlice({
         state.loading = false;
         state.clients = action.payload;
       })
-      .addCase(fetchClients.rejected, (state, action) => {
+      .addCase(fetchClients.rejected, (state) => {
         state.loading = false;
       })
 

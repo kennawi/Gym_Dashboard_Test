@@ -29,7 +29,7 @@ const classSlice = createSlice({
         state.loading = false;
         state.classItem = action.payload;
       })
-      .addCase(fetchClassDetails.rejected, (state, action) => {
+      .addCase(fetchClassDetails.rejected, (state) => {
         state.loading = false;
       });
   },
