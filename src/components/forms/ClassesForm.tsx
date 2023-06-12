@@ -1,5 +1,4 @@
 import React from "react";
-import { ClassItem } from "../../types/class";
 
 interface IClassesFormProps {
   onHandleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
