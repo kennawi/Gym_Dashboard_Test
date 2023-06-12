@@ -19,7 +19,7 @@ const ClientDetails: React.FC = () => {
       <div className=" bg-white rounded-lg grid grid-cols-2 gap-4 shadow-md overflow-hidden ">
         <div className="w-full h-full">
           <img
-            src="/public/avatar1.jpg"
+            src="/avatar1.jpg"
             alt="Client Profile"
             className=" object-cover"
           />
