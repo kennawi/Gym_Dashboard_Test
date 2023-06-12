@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import Sidebar from "../components/navegation/Sidebar";
+import { useState } from "react";
+import Sidebar from "../components/navigation/Sidebar";
 import { Outlet } from "react-router-dom";
 import store from "../store";
 import { Provider } from "react-redux";
-import Navbar from "../components/navegation/Navbar";
+import Navbar from "../components/navigation/Navbar";
 
 const RootLayout = () => {
   const toggleSidebar = () => {

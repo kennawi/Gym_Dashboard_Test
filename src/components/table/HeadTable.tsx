@@ -25,9 +25,6 @@ const HeadTable: React.FC<IHeadTableProps> = ({
   return (
     <thead className="text-xs text-gray-900 uppercase dark:text-gray-400">
       <tr>
-        {/* <th scope="col" className="px-6 py-3">
-          {Heading}
-        </th> */}
         <th scope="col" className="px-6 py-3">
           {name}
         </th>

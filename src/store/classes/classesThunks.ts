@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { Class } from "../../types/class";
+import { ClassItem } from "../../types/class";
 import axios from "axios";
 
 interface AddClassPayload {
@@ -27,7 +27,7 @@ interface EditClassPayload {
 const API_URL = "https://64103182e1212d9cc92c334f.mockapi.io/api/gym/classes";
 
 // Async thunk action to fetch classes
-export const fetchClasses = createAsyncThunk<Class[]>(
+export const fetchClasses = createAsyncThunk<ClassItem[]>(
   "classes/fetchClasses",
   async () => {
     const response = await axios.get(API_URL);
@@ -36,7 +36,7 @@ export const fetchClasses = createAsyncThunk<Class[]>(
 );
 
 // Async thunk action to add a class
-export const addClass = createAsyncThunk<Class, AddClassPayload>(
+export const addClass = createAsyncThunk<ClassItem, AddClassPayload>(
   "classes/addClass",
   async (classItem) => {
     const response = await axios.post(API_URL, classItem);
@@ -45,7 +45,7 @@ export const addClass = createAsyncThunk<Class, AddClassPayload>(
 );
 
 // Async thunk action to edit a class
-export const editClass = createAsyncThunk<Class, EditClassPayload>(
+export const editClass = createAsyncThunk<ClassItem, EditClassPayload>(
   "classes/editClass",
   async (updatedClass) => {
     const url = `${API_URL}/${updatedClass.id}`;
