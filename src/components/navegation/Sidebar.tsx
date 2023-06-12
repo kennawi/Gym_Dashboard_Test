@@ -1,5 +1,5 @@
-import React, { Children, ReactNode, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { ReactNode } from "react";
+import { NavLink } from "react-router-dom";
 
 export interface ISidebarProps {
   children: ReactNode;
